@@ -38,7 +38,8 @@ Perform migration / create database tables needed by Django:
 
 Check database tables:
 
-```mysql> use crustymonolith;
+```
+mysql> use crustymonolith;
 Reading table information for completion of table and column names
 You can turn off this feature to get a quicker startup with -A
 
@@ -58,7 +59,8 @@ mysql> show tables;
 | django_migrations          |
 | django_session             |
 +----------------------------+
-10 rows in set (0.24 sec)```
+10 rows in set (0.24 sec)
+```
 
 
 Create models for polls app 
