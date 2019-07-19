@@ -129,4 +129,10 @@ mysql> select * from auth_user;
 1 row in set (0.03 sec)
 ```
 
+Updated admin for `polls` to allow administrative modification 
+
+Now moving on to [part 3](https://docs.djangoproject.com/en/2.2/intro/tutorial03/) of the tutorial.
+
+
+
 
