@@ -133,6 +133,18 @@ Updated admin for `polls` to allow administrative modification
 
 Now moving on to [part 3](https://docs.djangoproject.com/en/2.2/intro/tutorial03/) of the tutorial.
 
+Focusing on views... Django's mechanism for delivering web pages. 
+```
+To get from a URL to a view, Django uses what are known as ‘URLconfs’. A URLconf maps URL patterns to views.
+```
+
+Views detail:
+
+```
+Each view is responsible for doing one of two things: returning an HttpResponse object containing the content for the requested page, or raising an exception such as Http404. The rest is up to you.
+
+Your view can read records from a database, or not. It can use a template system such as Django’s – or a third-party Python template system – or not. It can generate a PDF file, output XML, create a ZIP file on the fly, anything you want, using whatever Python libraries you want.
+```
 
 
 
