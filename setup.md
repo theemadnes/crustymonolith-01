@@ -88,3 +88,29 @@ CREATE TABLE `polls_choice` (`id` integer AUTO_INCREMENT NOT NULL PRIMARY KEY, `
 ALTER TABLE `polls_choice` ADD CONSTRAINT `polls_choice_question_id_c5b4b260_fk_polls_question_id` FOREIGN KEY (`question_id`) REFERENCES `polls_question` (`id`);
 COMMIT;
 ```
+
+A quick health check: `python manage.py check`
+
+Re-run migrate to enact changes: 
+
+`python manage.py migrate`
+
+Modifying the database in 3 steps:
+
+- change models in `models.py`
+- `makemigrations` to create migrations
+- `migrate` to apply changes 
+
+Shelling in to Django API: 
+
+`python manage.py shell` 
+
+Good exercise adding str representations to models:
+
+```
+def __str__(self):
+    return self.question_text
+```
+
+
+
