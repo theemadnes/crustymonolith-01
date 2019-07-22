@@ -68,6 +68,8 @@ Create models for polls app
 - note that each model subclasses `models.model`
 - relationships are defined between models using `ForeignKey`
 
+Mapping an app to a given project means updating the project `settings.py` to reference the new app. 
+
 
 Create a migration the new models: `python manage.py makemigrations polls`
 
@@ -145,6 +147,20 @@ Each view is responsible for doing one of two things: returning an HttpResponse 
 
 Your view can read records from a database, or not. It can use a template system such as Django’s – or a third-party Python template system – or not. It can generate a PDF file, output XML, create a ZIP file on the fly, anything you want, using whatever Python libraries you want.
 ```
+
+A few has a specific function that's mapped to a template, and is represented by a Python function or method. A `URLconf` is used to map a specific URL path to a view. 
+
+Templates are an approach to avoid hard-coding page content in Python code. 
+
+Why template namespacing is important:
+
+```
+Now we might be able to get away with putting our templates directly in polls/templates (rather than creating another polls subdirectory), but it would actually be a bad idea. Django will choose the first template it finds whose name matches, and if you had a template with the same name in a different application, Django would be unable to distinguish between them. We need to be able to point Django at the right one, and the easiest way to ensure this is by namespacing them. That is, by putting those templates inside another directory named for the application itself.
+```
+
+On to [part 4](https://docs.djangoproject.com/en/2.2/intro/tutorial04/)...
+
+
 
 
 
